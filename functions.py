@@ -40,8 +40,8 @@ read_file()
 print_students_titlecase()
 
 
-bandera= True
-while bandera:
+flag= True
+while flag:
     print("Ingresar Datos del Estudiante")
     student_name = input("Enter student name: ")
     student_id = input("Enter student ID: ")
@@ -51,11 +51,11 @@ while bandera:
     continuarIngresandoEstudiantes = input("Deseda seguir ingresando estudiantes (S) ó (N) :")
 
     if (continuarIngresandoEstudiantes=="S"):
-        bandera=True
+        flag=True
         os.system("cls")
         
     else:
-        bandera=False
+        flag=False
         print("Lista de Estudiantes")
         print_students_titlecase()
 
