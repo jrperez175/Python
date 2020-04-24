@@ -1,9 +1,5 @@
 Jhon
 Juan
 Carlos
-<<<<<<< HEAD
-Ovidio
-=======
 Pedro
 raul
->>>>>>> a86e64df88f1af1753b73a8eaa5bf07755825974

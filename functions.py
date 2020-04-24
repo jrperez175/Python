@@ -39,11 +39,6 @@ def read_file():
     except Exception:
         print("Could Not Read File")
 
-<<<<<<< HEAD
-read_file()
-print_students_titlecase()
-
-
 flag= True
 while flag:
     print("Ingresar Datos del Estudiante")
@@ -62,9 +57,6 @@ while flag:
         flag=False
         print("Lista de Estudiantes")
         print_students_titlecase()
-=======
-
->>>>>>> a86e64df88f1af1753b73a8eaa5bf07755825974
 
 if __name__ == "__main__":
     read_file()
