@@ -1,5 +1,16 @@
 {% extends 'index.html' %}
+
+
 {% block body %}
+
+  {% with mensajes = get_flashed_mensajes()%}
+    {% if mensajes %}
+      {% for mensaje in mensajes %}
+        <p> {{ mensaje.decode('utf-8') }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
 <form action="/adicionar" method="post">
   <fieldset>
     <legend>Añadir nuevo contacto</legend>

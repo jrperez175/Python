@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+
+{% block body %}
+    <h2>{{ contacto.nombre }}</h2>
+    <p>Teléfono: {{ contacto.telefono }}</p>
+    <p>Email: {{ contacto.email }}</p>
+
+    <hr>
+    <form action="/borrar" method="post">
+        <input type="hidden" name="uid" value="{{ contacto.key.id() }}">
+        <button type="submit">Eliminar</button>
+    </form>
+    <p>
+        <a href="/">Regresar</a>
+    </p>
+
+{% endblock %}
