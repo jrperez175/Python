@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Archivo actual",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            //"args": ["elcolombiano"] //Argumento utilizado para Scrapear una web
+            //"args": ["elcolombiano_2020_08_20_articles.csv"] //Argumento utilizado para limpiar un df
+            "args": ["clean_eluniversal_2019_06_07_articles.csv"] //Argumento utilizado para subir a la BD
+        }
+    ]
+}

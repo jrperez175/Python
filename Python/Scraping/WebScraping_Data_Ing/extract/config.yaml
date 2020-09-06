@@ -1,0 +1,31 @@
+# Crea la estructura
+
+news_sites:
+  elcolombiano:
+    url: http://elcolombiano.com
+    queries:
+        homepage_article_links: '.noticia-segundaria .left a'
+        article_body: '.noticia p'
+        article_title: '.information-noticia h3'
+  futbolred:  
+    url: http://futbolred.com
+    queries:
+        homepage_article_links: '.cintillo-multimedia a'
+        article_body: '.cuerpo-articulo'
+        article_title: '.container-titular h1'
+  eltiempo:  
+    url: http://eltiempo.com
+    queries:
+        homepage_article_links: '.title-container a'
+        article_body: '.contenido'
+        article_title: '.titulo-principal-bk h1'
+
+  semana:  
+    url: http://semana.com
+    queries:
+        homepage_article_links: '.article-h a'
+        article_body: '.tittleArticuloOpinion'
+        article_title: '#contentItem'
+  
+        
+  
