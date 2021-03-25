@@ -29,7 +29,7 @@ def _extract():
     
     
     for news_sites_uid in news_sites_uids:
-        #subprocess.run(['python',   'main.py', news_sites_uid], cwd='./extract')
+        subprocess.run(['python',   'main.py', news_sites_uid], cwd='./extract')
         # subprocess.run(['find', '.', '-name', '{}*'.format(news_sites_uid),
         #                     '-exec', 'mv', '{}', '../transform/{}_.csv'.format(news_sites_uid),
         #                     ';'], cwd = './extract')
