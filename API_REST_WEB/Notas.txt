@@ -1,12 +1,29 @@
+Progamas necesarios
+- XAMMP
+- Postman
+
 Ambiente Virtual (https://docs.python.org/es/3/tutorial/venv.html)
-- Actualizar pip :python -m pip install --upgrade pip ó python -m pip install --upgrade --user pip
+
+- Actualizar pip :py -m pip install --upgrade pip ó python -m pip install --upgrade --user pip
 - Instalar Amniente Virtual: py -m pip install virtualenv
 - Creando ambiente virtual : py -m virtualenv python_modules
+- Creando ambiente con una version especifica python3.8 -m venv mivenv
+- Modificando la verison de python en el ambiente virtual virtualenv -p python3 Donde python3 puedes cambiarlo por 2.6, 2.7, 3.5, 3.6, para ajustarlo a la versión de Python que necesites en tu proyecto
 - Activando ambiente vurtual: source python_modules/Scripts/activate
 - Desactivando ambiente virtual: deactivate
 
-Instalar Flash y Json en el ambiente virtual
-- pip install flash 
-- El json ya esta contenido en el flash
-- Nos permite crear de una manera muy sencilla aplicaciones web con Python (https://openwebinars.net/blog/que-es-flask/)
-- jsonify : Creates a Response with the JSON representation of the given arguments with an application/json mimetype. The arguments to this function are the same as to the dict constructor
+Instalar paquetes por medio del archivo requirements.txt
+- pip install -r requirements.txt
+
+Paquetes a instalar
+    Flash y Json en el ambiente virtual
+    - pip install flask 
+    - El json ya esta contenido en el flask
+    - Nos permite crear de una manera muy sencilla aplicaciones web con Python (https://openwebinars.net/blog/que-es-flask/)
+    - jsonify : Creates a Response with the JSON representation of the given arguments with an application/json mimetype. The arguments to this function are the same as to the dict constructor
+
+    flask-sqlalchemy Conecta con BD sql (https://docs.sqlalchemy.org/)
+    flask-marshmallow Define esquemas en la BD
+    marshmallow-sqlalchemy para relacionas ambas librerias
+    pymysql Driver para conectarnos a una BD mysql
+
