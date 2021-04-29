@@ -4,14 +4,14 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__) #Instancia la aplicacion
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost:3386/bdpythonapi' #String de conexion
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost:3306/bdpythonapi' #String de conexion
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False #Deshabilita la gestión de notificaciones de sqlalchemy
 
 db = SQLAlchemy(app) #Crear un objeto que representa nuestra base de datos
 ma = Marshmallow(app)
 
 #Creacion Tabla Categoria
-class Categoria(db.model):
+class Categoria(db.Model):
     cat_id = db.Column(db.Integer, primary_key=True)
     cat_nom = db.Column(db.String(100))
     cat_desp = db.Column(db.String(100))
@@ -25,7 +25,7 @@ db.create_all()
 #Esquema Categoria
 class CategoriaSchema(ma.Schema):
     class Meta:
-        fields = ('cat_id'.'cat_mom','cat_desp')
+        fields = ('cat_id','cat_nom','cat_desp')
 
 #Una sola respuesta
 categoria_schema =  CategoriaSchema()
@@ -39,6 +39,12 @@ def get_categoria():
     all_categorias = Categoria.query.all()
     result = categorias_schema.dump(all_categorias)
     return jsonify(result)
+
+#GET por Id
+@app.route('/categoria/<id>',methods=['GET'])
+def get_categoria_id(id):
+    una_categoria = Categoria.query.get(id)
+    return categoria_schema.jsonify(una_categoria)
 
 
 
