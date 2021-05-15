@@ -9,7 +9,7 @@ Ambiente Virtual (https://docs.python.org/es/3/tutorial/venv.html)
 - Creando ambiente virtual : py -m virtualenv python_modules
 - Creando ambiente con una version especifica python3.8 -m venv mivenv
 - Modificando la verison de python en el ambiente virtual virtualenv -p python3 Donde python3 puedes cambiarlo por 2.6, 2.7, 3.5, 3.6, para ajustarlo a la versión de Python que necesites en tu proyecto
-- Activando ambiente vurtual: source python_modules/Scripts/activate
+- Activando ambiente vurtual: source venv/Scripts/activate
 - Desactivando ambiente virtual: deactivate
 
 Instalar paquetes por medio del archivo requirements.txt
