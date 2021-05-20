@@ -1,0 +1,36 @@
+- Ejecutar el archivo de dependencias requirements.txt
+pip install -r requeriments.txt
+- Para ver la version de Django
+django-admin version
+-Crear un proyecto en Django
+ django-admin startproject {nombreproyecto}
+-Estructura base
+Carpeta Proyecto-Carpeta Interna con los archivos base de configuracion
+    - __init__.py : Paquete de python
+    - asgi.py: Despliege de la aplicacion en el servidor
+    - settings.py: Se configuran varias caracteristicas del proyecto
+    - urls.py: Urls del protecto
+    - wsgi.py: Despliege de la aplicacion en el servidor
+Carpeta Proyecto - manage.py : Ejecuta la aplicacion y la despliega
+- Levantar un servicio (servidor)
+Dentro de la carpeta del proyecto ejecutar
+python manage.py runserver
+abrir un navegador y escribir:
+127.0.0.1:8000
+-Agregar contenido web
+Concepto de app: Nos permite organizar nuestras aplicaciones, una aplicacion puede contener uno o mas app que se encargan
+de organizar una parte de nuestro sistema, ejm app para desplegar listado de personas, app que organiza las paginas
+generales de la aplicacion
+-crear nueva pagina (apps) estar en la carpeta del proyecto (no en la carpeta raiz)
+python manage.py startapp {nombre del app - webapp}
+se puede eliminar todo excepto __init__.py y views.py
+- Registrar la app
+#MODIFICAR settings.py a nivel del proyecto:
+INSTALLED_APPS agregar al final
+ 'webapp',
+- Agregar una nueva URL
+Modificar el archivo urls.py con la nueva url
+path('bienvenido/', bienvenido()),   se define un ruta y luego y una funcion
+- Agregar la nueva funcion
+Modificar el archivo views.py de la app creada (webapp)
+
