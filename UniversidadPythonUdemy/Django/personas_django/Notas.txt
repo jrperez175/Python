@@ -1,9 +1,11 @@
-- Ejecutar el archivo de dependencias requirements.txt
+####### Ejecutar el archivo de dependencias requirements.txt #######
 pip install -r requeriments.txt
-- Para ver la version de Django
+
+####### Para ver la version de Django ######
 django-admin version
--Crear un proyecto en Django
- django-admin startproject {nombreproyecto}
+
+######## Crear un proyecto en Django#######
+django-admin startproject {nombreproyecto}
 -Estructura base
 Carpeta Proyecto-Carpeta Interna con los archivos base de configuracion
     - __init__.py : Paquete de python
@@ -12,12 +14,14 @@ Carpeta Proyecto-Carpeta Interna con los archivos base de configuracion
     - urls.py: Urls del protecto
     - wsgi.py: Despliege de la aplicacion en el servidor
 Carpeta Proyecto - manage.py : Ejecuta la aplicacion y la despliega
-- Levantar un servicio (servidor)
+
+###### Levantar un servicio (servidor)####3
 Dentro de la carpeta del proyecto ejecutar
 python manage.py runserver
 abrir un navegador y escribir:
 127.0.0.1:8000
--Agregar contenido web
+
+#######Agregar contenido web######
 Concepto de app: Nos permite organizar nuestras aplicaciones, una aplicacion puede contener uno o mas app que se encargan
 de organizar una parte de nuestro sistema, ejm app para desplegar listado de personas, app que organiza las paginas
 generales de la aplicacion
@@ -34,3 +38,27 @@ path('bienvenido/', bienvenido()),   se define un ruta y luego y una funcion
 - Agregar la nueva funcion
 Modificar el archivo views.py de la app creada (webapp)
 
+###### Modelo de Clases
+
+Documentacion
+https://docs.djangoproject.com/en/3.0/ref/models/fields/
+https://docs.djangoproject.com/en/3.0/howto/custom-model-fields/
+
+- Antes de empezar la leccion borrar el archivo sqlite3 para ahora trabajar con postregresql
+
+- instalar postgresql:
+python -m pip install psycopg2
+
+#crea base de datos django_db en pgadmin, sin nada mas
+
+#configurar postregresql en archivo settings.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_db',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
