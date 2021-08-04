@@ -1,12 +1,14 @@
 class Persona:
-    def __init__(self, nombre, apellido, edad):
+    def __init__(self, nombre, apellido, edad, *args, **kwargs):
         self.nombre = nombre  # Atributos de clase
         self.apellido = apellido
         self.edad = edad
         self.sexo = 'M'  # Se pueden definir atributos fijos
+        self.valores = args
+        self.terminos = kwargs
 
     def mostrar_detalle(self):
-        print(f'Persona: {self.nombre} {self.apellido} {self.edad}')
+        print(f'Persona: {self.nombre} {self.apellido} {self.edad} {self.valores} {self.terminos}')
 
 print(type(Persona))
 print(f'---------------------------------------')
@@ -39,4 +41,9 @@ Persona.mostrar_detalle(persona1)
 print(f'Adicionar atributos a un objeto')
 persona1.telefono = '300XXXX' #Este atributo no se comparte con los demas objetos
 print (persona1.telefono)
-print (persona2.telefono)
+#print (persona2.telefono)
+
+#Robusteciendo la clase persona con valores variables y diccionarios
+print(f'Adicionando parametros valores variables y diccionarios')
+persona3 = Persona('Raul', 'Muñoz', 49, '300655XX',5,8,m='manzana',p='pera')
+persona3.mostrar_detalle()
